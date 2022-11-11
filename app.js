@@ -12,29 +12,29 @@ hbs.registerPartials(__dirname + "/views/partials");
 // Servir contenido estático
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-	res.render("home", {
-		nombre: "Matias Straface",
-		titulo: "Practicas curso NodeJS",
-	});
-});
+// app.get("/", (req, res) => {
+// 	res.render("home", {
+// 		nombre: "Matias Straface",
+// 		titulo: "Practicas curso NodeJS",
+// 	});
+// });
 
-app.get("/generic", (req, res) => {
-	res.render("generic", {
-		nombre: "Matias Straface",
-		titulo: "Practicas curso NodeJS",
-	});
-});
+// app.get("/generic", (req, res) => {
+// 	res.render("generic", {
+// 		nombre: "Matias Straface",
+// 		titulo: "Practicas curso NodeJS",
+// 	});
+// });
 
-app.get("/elements", (req, res) => {
-	res.render("elements", {
-		nombre: "Matias Straface",
-		titulo: "Practicas curso NodeJS",
-	});
-});
+// app.get("/elements", (req, res) => {
+// 	res.render("elements", {
+// 		nombre: "Matias Straface",
+// 		titulo: "Practicas curso NodeJS",
+// 	});
+// });
 
 app.get("*", (req, res) => {
-	res.sendFile(__dirname + "/public/back/404.html");
+	res.sendFile(__dirname + "/public/back/index.html");
 });
 
 app.listen(port, () => {
