@@ -33,6 +33,8 @@ app.use(express.static("public"));
 // 	});
 // });
 
+//cambio para probar actualización de datos...
+
 app.get("*", (req, res) => {
 	res.sendFile(__dirname + "/public/back/index.html");
 });
